@@ -1,0 +1,105 @@
+/* Basic page layout */
+
+body {
+  font-family: sans-serif;
+  background: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 900px;
+  margin: 30px auto 40px auto;
+  padding: 0 15px;
+}
+
+/* Heading + rule */
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+
+hr {
+  margin-bottom: 0.8em;
+}
+
+.role {
+  margin-bottom: 1.2em;
+}
+
+/* Contact + photo */
+
+.top-block {
+  display: flex;
+  gap: 20em;
+  align-items: flex-start;
+  margin-bottom: 1.5em;
+}
+
+/* Contact text takes the remaining space on the left */
+.contact {
+  flex: 1 1 0;
+}
+
+/* Photo sits on the right and scales with page width */
+.photo-wrap {
+  flex: 0 0 25%;        /* roughly a quarter of the line; tweak if you like */
+  text-align: right;
+}
+
+.photo-wrap img {
+  width: 100%;          /* fill the photo-wrap width */
+  height: auto;         /* keep aspect ratio */
+  max-width: 200px;     /* don’t let it get too big on large screens */
+  border-radius: 3px;
+}
+
+/* Sections */
+
+h2 {
+  font-size: 1.2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.1em;
+}
+
+p {
+  margin: 0 0 0.6em 0;
+}
+
+/* Lists */
+
+ul {
+  margin: 0 0 0.8em 1.4em;
+  padding: 0;
+}
+
+.pub-list li {
+  margin-bottom: 0.4em;
+}
+
+/* Links */
+
+a {
+  color: #004c99;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Simple responsiveness */
+
+@media (max-width: 700px) {
+  .top-block {
+    flex-direction: column;
+  }
+
+  .photo-wrap img {
+    max-width: 140px;
+  }
+}
